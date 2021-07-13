@@ -1,0 +1,213 @@
+body { 
+    margin: 0;
+    background-color: #141414; 
+    font-family: 'Mulish', sans-serif;
+    overflow-x: hidden;
+      }
+  header {
+    background-color: #141414;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__img {
+    width: 200px;
+    margin-top: 10px;
+  }
+  .header__menu {
+    margin-right: 20px;
+    width: 200px;
+  /*   border: 1px solid blue; */
+  }
+  .header__menu ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    margin: 0;
+    
+  /*   border: 1px solid green; */
+  }
+  .header__menu:hover ul, ul:hover {
+    display: block;
+  }
+  .header__menu li {
+  /*   margin: 10px 0; */
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+    background-color:rgba(0,0,0, 0.3);
+  }
+  .header__menu li.menu-space {
+    background-color: transparent;
+  }
+  .header__menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  .header__menu li a:hover {
+    text-decoration: underline;
+  } 
+  
+  .header__menu--profile {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .header__menu--profile img {
+    margin-right: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+  }
+  .header__menu--profile p {
+    margin: 0;
+    color: white;
+  }
+  .main {
+    height: 300px;
+  }
+  .main__title {
+    color: white;
+    font-size: 25px;
+  }
+  .input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    padding: 0 20px;
+    width: 70%;
+    outline: none;
+  }
+  ::placeholder {
+    color: white;
+  }
+  
+  .search {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .logo {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 7px;
+    left:7px;
+  }
+  .carousel {
+  /*   display: none; */
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
+  /*   margin: 30px; */
+    position: relative;
+  }
+  .carousel__container {
+    white-space: nowrap;
+    margin: 140px 30px 0;
+    padding-bottom: 10px;
+  }
+  .carousel-item {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+  /*   background-color: palevioletred; */
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    transition: 450ms all;
+    transform-origin: bottom left;
+    position: relative;
+    color: white;
+  }
+  .carousel-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+  }
+  .carousel-item__details {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 10px;
+    opacity: 1;
+    transition: 450ms opacity;
+    padding: 10px 7px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* align-items: flex-end; */
+  }
+  .carousel-item__details--title {
+    font-size: 12px;
+    font-weight: bold;
+    word-wrap: break-word;
+  }
+  .carousel-item__details--subtitle {
+    margin-top: 3px;
+  }
+  .carousel-item__details--subtitle span.duration {
+    border: 1px solid white;
+    padding: 1px 2px;
+  }
+  .carousel-item__details--subtitle span.progress {
+    color: #3CB459;
+    font-size: 11px;
+    font-weight: bold;
+  }
+  .carousel-item:hover ~ .carousel-item {
+    transform: translate3d(100px, 0, 0);
+  }
+  .carousel__container:hover .carousel-item {
+    opacity: 0.3;
+  }
+  .carousel__container:hover .carousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  /* .carousel__container:hover .carousel-item:hover  */
+  
+  .carousel__container:hover .carousel-item:hover .controls {
+    display: flex;
+  }
+  .controls {
+    display: none;
+    margin-bottom: 10px;
+  }
+  .icon {
+    border: 1px solid white;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+  }
+  .play {
+    background-color: white;
+    margin-right: 7px;
+  }
+  .play:hover {
+     background-color: #ffffffb3;
+     border: 1px solid #ffffffb3;
+  }
+  .plus {
+    background-color: transparent;
+  }
+  .plus:hover {
+   background-color: #ffffff12;
+  }
+  .icon__svg {
+     height: 24px;;
+  }
