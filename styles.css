@@ -1,17 +1,33 @@
+* {
+    box-sizing: border-box;
+  }
+  :root {
+    --header-height: 80px;
+    --footer-height: 50px
+  }
 body { 
     margin: 0;
     background-color: #141414; 
     font-family: 'Mulish', sans-serif;
     overflow-x: hidden;
     color: white;
+    position: relative;
+    /* background-image: url(assets/platziteam3D.png); */
       }
-  header {
+  .body--login {
+    overflow: hidden;
+    height: 100vh;
+  }
+  .header {
     background-color: #141414;
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .header.header--login {
+    background-color : transparent;
   }
   .header__img {
     width: 200px;
@@ -75,7 +91,7 @@ body {
     color: white;
     font-size: 25px;
   }
-  .input {
+  .search__input {
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
     border-radius: 25px;
@@ -86,8 +102,9 @@ body {
     padding: 0 20px;
     width: 70%;
     outline: none;
+    caret-color: white;
   }
-  ::placeholder {
+  .search__input::placeholder {
     color: white;
   }
   
@@ -211,4 +228,186 @@ body {
   }
   .icon__svg {
      height: 24px;;
+  }
+  .login {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: grey;
+      padding: 30px 0;
+      min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  }
+  .login__container {
+      background-color: rgba(0, 0, 0, 0.75);
+      /* border: 2px solid white; */
+      border-radius: 5px;
+      padding: 30px 30px 0px;
+      /* box-shadow: rgba(200,200,200,0.1) 0 0 20px 5px; */
+      width: 430px;
+  }
+  /* .login__container .input {
+      width: 100%;
+  } */
+  .login__container .form {
+      display: flex;
+  }
+  .login__title {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .login__input {
+    background-color: #333;
+    color: white;
+    caret-color: white;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    padding: 0 20px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  .login__input::placeholder {
+    color: grey;
+  }
+  
+  .login-button {
+    background-color: #e50914;
+    width: 100%;
+    min-height: 50px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 12px 0;
+    cursor: pointer;
+    
+  }
+  .background-collage {
+    position: absolute;
+    top: -200px;
+    bottom: 0;
+    left: -500px;
+    right: 0;
+    width: 200%;
+    height: 200%;
+    z-index: -10;
+    transform: rotateX(-20deg) rotateY(-40deg) perspective(600px);
+    /* transform: translate3d(-20px, 4em, 10px); */
+    /* border: 1px solid red; */
+  }
+  .background-collage__filter {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(5, 5, 5, 0.7);
+    z-index: 0;
+  }
+  .background-collage img {
+    width: 100%;
+    height: 100%;
+  }
+  .login-footer {
+    text-align: center;
+    height: calc(var(--footer-height) - 10px);
+    line-height: calc(var(--footer-height) - 10px);
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  a {
+    text-decoration: none;
+  }
+  .login a {
+    color: white;
+  }
+  .login-footer a {
+    color: grey;
+  }
+  .login__container--register {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+  .login__container--social-media {
+    margin-top: 15px;
+  }
+  .login__container--social-media img {
+    height: 16px;
+    /* margin-top: 10px; */
+    position: relative;
+    top: 2px;
+  }
+  .login__container--remember-me {
+    display: flex;
+    justify-content:space-between;
+  }
+  #remember-me {
+    opacity: 0;
+  }
+  #remember-me+label {
+      position: relative;
+  }
+  #remember-me+label::before {
+    content: '';
+    position: absolute;
+    left: -23px;
+    top: 2px;
+    background-color: #737373;
+    border-radius: 2px;
+    border: 0;
+    height: 16px;
+    width: 16px;
+  }
+  #remember-me+label::after {
+    content: '\2714';
+    font-weight: bolder;
+    position: absolute;
+    display: none;
+    left: -22px;
+    top: -1px;
+    color: black;
+    height: 16px;
+    width: 16px;
+  }
+  #remember-me:checked+label::after {
+    display: block;
+  }
+  .not-found {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1534996858221-380b92700493?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80);
+  }
+  .not-found__filter {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(114, 2, 2, 0.445);
+    z-index: 1;
+  }
+  .not-found img {
+    height: 400px;
+  }
+  .not-found img, .not-found h1 {
+    z-index: 2;
+  }
+  @media only screen and (max-width: 660px) {
+    .login__container {
+      background-color: transparent;
+      border: none;
+      width: 100%;
+    }
+    .background-collage {
+      display: none;
+    }
   }

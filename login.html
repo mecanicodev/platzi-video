@@ -10,35 +10,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header class="header">
+<body class="body--login">
+    <div class="background-collage">
+        <div class="background-collage__filter"></div>
+        <img src="assets/platzi-team.jpg" alt="">
+    </div>
+    <header class="header header--login">
         <img class="header__img" src="https://drive.google.com/uc?exports=view&id=1LFIjt-23lOx5Z3RrFES4cg6keYjgY6V3" alt="Platzi Logo">
-        <div class="header__menu">
-          <div class="header__menu--profile">
-            <img src="https://drive.google.com/uc?exports=view&id=1x6V9_L7W8sOaYcTjc-EhpqwGGpw7c7f3" alt="User">
-            <p>Aníbal Español</p>
-          </div>
-          <ul>
-            <li class="menu-space"></li>
-            <li><a href="#">Cuenta</a></li>
-            <li><a href="#">Cerrar Sesión</a></li>
-          </ul>
-         </div>
     </header>
     <section class="login">
         <section class="login__container">
-            <h2>Inicia Sesión</h2>
+            <h2 class="login__title">Inicia sesión</h2>
             <form action="" class="login__container--form">
-                <input class="input" type="text" placeholder="Correo">
-                <input class="input" type="password" placeholder="Contraseña">
-                <button class="button">Iniciar sesión</button>
+                <input class="login__input" type="text" placeholder="Correo">
+                <input class="login__input" type="password" placeholder="Contraseña">
+                <button class="login-button">Iniciar sesión</button>
                 <div class="login__container--remember-me">
-                    <label>
-                        <input type="checkbox" name="" id="check1" value="check1">
-                    </label>
+                    <div>
+                        <input type="checkbox" name="" id="remember-me">
+                        <label for="remember-me">Recuérdame</label>
+                    </div>
+                    <a href="#">Olvide mi contraseña</a>
                 </div>
             </form>
+            <section class="login__container--social-media">
+                <div><img src="https://assets.nflxext.com/ffe/siteui/login/images/FB-f-Logo__blue_57.png" alt="Facebook logo"> Inicia sesión con Facebook</div>
+            </section>
+            <p class="login__container--register">¿Primera vez en Platzi <strong>Video</strong>? <a href="">Suscríbite ya.</a></p>
         </section>
     </section>
+    <footer class="login-footer">
+        <a href="">Términos de uso • </a>
+        <a href="">Declaración de privacidad</a>
+    </footer>
 </body>
 </html>
